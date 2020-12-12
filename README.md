@@ -1,4 +1,4 @@
-#  ==***“A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS”***==
+#  ***“A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS”***
  ## Introduction
 Data is a valuable asset that must be protected. Data is digital information transmitted through electrical signal It is divided into two types, writing, and sound. It may be manipulated or duplicated without the owner's knowledge. Plagiarism is an act of evil in the falsification of a work. It is done to increase the popularity of a plagiarist. With the advent of computer science technology, plagiarism can be avoided. Text mining is part of the science that discusses the processing of words.
 Data Searching is a process which involves matching the data in a systematic order to make it easier to find, work and analyze. In computer science, string searching algorithms and also called string matching algorithms. String matching or searching algorithms search the pattern or alphabets from the array of elements. It  is most required when you have data in bulk and we have to find a particular item amongst hundreds, thousands or more items. 
@@ -44,17 +44,17 @@ Steps for Rabin-Karp algorithm:
 3.	Match and search the substring/pattern of text and its pattern from the block of data. Search the item if the hash of the sub pattern is equal to the pattern’s hash.
 
 ## Algorithm
-                                
+```
 STEP 1. function call 
 STEP 2. declare text string to store the main text
 STEP 3. declare pat string to store the pattern to be searched
 STEP 4. declare a variable q as a random prime number
 STEP 5. call to the function match(pass pattern, text, q) from 6 to 30
-STEP 5.1 calculate the length of pat and text and store them as plen and tlen
-STEP 5.2 declare variables i and j 
-STEP 5.3 declare variable rm as 1
-STEP 5.4 declare two variables to store hash of pattern and text i.e. pat_h and text_h 
-STEP 5.5 for i=0 to i<plen-1 do from 11 to 
+    STEP 5.1 calculate the length of pat and text and store them as plen and tlen
+    STEP 5.2 declare variables i and j 
+    STEP 5.3 declare variable rm as 1
+    STEP 5.4 declare two variables to store hash of pattern and text i.e. pat_h and text_h 
+    STEP 5.5 for i=0 to i<plen-1 do from 11 to 
 STEP 5.6 calculate rm = (rm * r) mod q
 STEP 5.7 pat_h = generate_hash function call
 STEP 5.8 text_h = generate_hash  function call 
@@ -78,12 +78,15 @@ STEP 15 check if (text_h < 0) then
 STEP 16 make it positive by adding q
 STEP 17 End Function
 
+```
+
 ## Knuth Morris Pratt Algorithm
  
 Knuth Morris Pratt Algorithm is based on the concept of generating a suffix-prefix table also known as the Pi table or the lps table. The pi table is generated using the substring (this is the pre-processing part). The way to generate the substring is the main part in this algorithm. The main concept behind this approach is we save the pattern. As soon as we detect the mismatch while searching for the pattern we already know a part of the pattern in the next window.
 
 ### Algorithm
 
+```
 STEP 1. function call
 STEP 2. declare text and pattern
 STEP 3. function call kmp_search(pass text and pattern)
@@ -113,11 +116,12 @@ STEP 3.5.3.5 if the condition is true then assign j as lps[j-1];
     		STEP 3.5.6 else 
     		STEP 3.5.7 print pattern not present 
 STEP 4 End Function
-
+```
 ## Boyer-Moore Algorithm
 
 Boyer-Moore Algorithm unlike the other two algorithm starts matching from the last character of the pattern. In this algorithm we create two approaches , the bad character heuristic and the good suffix heuristic. In this approach we shift the character which is initially in the mismatch state and bring it to a position where a match is found. Upon comparing the last character of the pattern if the match is not found the entire pattern is shifted by the length of the pattern.[5]
 ### Algorithm
+```
 STEP 1. Start Function
 STEP 2. search function call
 STEP 2.1 declare m and n as lengths of pattern and text
@@ -138,10 +142,13 @@ STEP 2.13 end while
 STEP 2.14 check if flag == 0 return false
 STEP 3 End Function
 
+```
+
 ## Self Designed Algorithm:
 
 ### Algorithm
 
+```
 STEP 1. passing the main string and the pattern
 STEP 2. calling the calculate function
 STEP 2.1 creating two pointers one at the start and another at the last of text - length of the pattern.
@@ -151,7 +158,7 @@ STEP 2.4 if match found then print match found from
 (beginning / last)
  	STEP 2.5 else print match not found
 STEP 3. End Function
-
+```
 # Implementation:
 ## Flow Charts
 ## Rabin-Karp Algorithm
@@ -212,9 +219,9 @@ References
 
 
  
-Appendix 1: Code Snippets
-Knuth Morris Pratt Algorithm
-
+# Appendix 1: Code Snippets
+### Knuth Morris Pratt Algorithm
+```
 void kmp_search(char* pat,char* text){
     int m=strlen(pat);
     int n=strlen(text);
@@ -264,9 +271,9 @@ void computeLPS(char* pat,int m,int* lps){
             j++;
         } 
     } }
-
- 
-Rabin Karp Algorithm
+```
+### Rabin Karp Algorithm
+```
 void match(char pat[], char text[], int q){
     
     int plen = strlen(pat);
@@ -309,9 +316,11 @@ void match(char pat[], char text[], int q){
      match (pat, text, q);
      return 0;
 }
+```
 
- 
-Boyer Moore Algorithm
+### Boyer Moore Algorithm
+
+```
 bool search(char *pat, char *txt){
     int m = strlen(pat);
     int n = strlen(txt);
@@ -341,8 +350,10 @@ bool executeBoyerMoore(char *pat, char *text){
    bool result = search(pat, text);
    return result;
  }
- 
-Self Designed Algorithm
+```
+
+### Self Designed Algorithm
+```
 bool executeSelf(char *pat, char *text){ 
     int lPattern = strlen(pat);
     int lText = strlen(text);
@@ -365,4 +376,5 @@ bool executeSelf(char *pat, char *text){
     bool result = match_self(pat, new_text1, new_text2, 101);
     return result;
     }
+    ```
 
