@@ -1,138 +1,5 @@
-“A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS”
-A 
-End Semester Report 
-for
-BACHELOR OF TECHNOLOGY
-in
-COMPUTER SCIENCE & ENGINEERING
-
-by
-
-Name	Roll No.
-Shreya Maheshwari	R164218089
-Nishtha Sehgal	R164218092
-
-
-under the guidance of
-Dr. Ravi Tomar
-Assistant Professor (S.G.)
-Department of Informatics
-
-
-
-
-
-
-
-Department of Systemics
-School of Computer Science and Engineering
-Bidholi, Via Prem Nagar, Dehradun, UK
-December – 2020
-Candidate’s Declaration
-
-We hereby certify that the project work, entitled A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS in partial fulfillment of the requirements for the award of the Degree of BACHELOR OF TECHNOLOGY in COMPUTER SCIENCE AND ENGINEERING with specialization in “Internet of Things and Smart Cities” and submitted to the School of Computer Science, Department of Informatics, University of Petroleum & Energy Studies, Dehradun, is an authentic record of our work carried out during a period from Aug-2020 to Nov-2020 under the supervision of Dr. Ravi Tomar, Assistant Professor (S.G.) , Dept. of Informatics. 
-
-Shreya Maheshwari		R164218089
-Nishtha Sehgal		R164218092
-
-The matter presented in this project has not been submitted by us for the award of any other degree of this or any other University. 
-
-This is to certify that the above statement made by the candidate is correct to the best of my knowledge.
-
-Dr. Ravi Tomar						Dr. Neelu Jyoti Ahuja
-Project Guide							HoD – Systemics
-UPES, Dehradun						UPES, Dehradun
-
-
-
-
-
-
-
-
-Acknowledgement
-
-We would like to express our special thanks of gratitude to our teacher, Dr. Ravi Tomar, as well as our Activity Coordinator, Dr. Alok Aggarwal, who gave us this opportunity to do this project on the topic A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS. This work would not have been possible without their support and valuable suggestions. 
-
-We sincerely thank to our respected Head of the Department, Dr. Neelu Jyoti Ahuja, for her support in doing our project at School of Computer Science. 
-
-We are also grateful to Dr. Manish Prateek, Dean- SoCS, UPES for giving us the necessary facilities to carry out our project work successfully. 
-
-We would like to thank all our friends for their help and constructive criticism during our project work. Finally, we have no words to express our sincere gratitude to our parents who have shown us this world and for every support they have given us. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-Abstract
-
-Sometimes students face the trouble of deciding the most appropriate algorithm method for their logic. They find their methods very time consuming or taking too much space and fail in making in better. This application will help students to decide  the correct method for their codes and programs with the help of  this study of  the comparison of the different pattern matching algorithms.This comparative study will help the students to get a better idea of the different pattern matching algorithms. It will also allow different method to execute these algorithms. This will allow the students to apply these pattern matching algorithms easily in their code logic. This study will give a clearer image of the comparison in the different time and space complexities for the Algorithms. 
-Pattern Searching is a process of checking and finding a pattern from a string. Although there are huge numbers of searching algorithms available, but here our work intends to show an overview of comparison between three different types of searching algorithms. We have tried to cover some technical aspects of these three searching algorithms. This research provides a detailed study of how all the three algorithms work & give their performance analysis with respect to time complexity.
-Data Sorting and searching is the way of making our study, research process easy and fast. Our project deals with comparative study about few Pattern Matching Algorithms. These algorithms check the possibility of presence of a sequence of characters from a particular string. If the sequence of characters in found in the string, pattern matching is performed. We work on the time consumed and the space occupied on searching a particular pattern from the data and searches the best result from the entire set of characters as fast and in the most convenient manner.
-
-The project aims to make it easier for students, and others to decide and work better with these Pattern matching Algorithms. 
-
- 
-List Of Figures
-
-Figure 1 Pert Chart	12
-Figure 2Rabin Karp Flow Chart	13
-Figure 3 Knuth Morris Pratt Algorithm	14
-Figure 4 Boyer  Moore Flow Chart	15
-Figure 5 DFD: Level0	16
-Figure 6 DFD:Level1	16
-Figure 7 Result Table	17
-Figure 8 Small Input - Time	18
-Figure 9 Repeated Text - Time	18
-Figure 10 Long Input - Time	19
-Figure 11 Special Characters - Time	19
-Figure 12 Empty File - Time	20
-
-
- 
-Table Of Contents
-
-1.	Introduction	1
-Motivation of the Work	2
-Objectives	2
-2.	Problem Statements	3
-3.	Literature Review	4
-4.	Methodology	5
-Rabin-Karp Algorithm:	5
-Knuth Morris Pratt Algorithm:	7
-Boyer-Moore Algorithm:	9
-Self Designed Algorithm:	10
-System Requirements:	11
-Design:	12
-Pert Chart	12
-5.	Implementation:	13
-Flow Chart	13
-Rabin-Karp Algorithm	13
-Knuth Morris Pratt Algorithm	14
-Boyer Moore Algorithm	15
-Data Flow Diagram	16
-6.	Result and Discussions	17
-7.	References	21
-8.	Appendix 1: Code Snippets	22
-Knuth Morris Pratt Algorithm	22
-Rabin Karp Algorithm	24
-Boyer Moore Algorithm	26
-Self Designed Algorithm	27
-
-
- 
- 
-Introduction
+            “A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS”
+                                        Introduction
 Data is a valuable asset that must be protected. Data is digital information transmitted through electrical signal It is divided into two types, writing, and sound. It may be manipulated or duplicated without the owner's knowledge. Plagiarism is an act of evil in the falsification of a work. It is done to increase the popularity of a plagiarist. With the advent of computer science technology, plagiarism can be avoided. Text mining is part of the science that discusses the processing of words.
 Data Searching is a process which involves matching the data in a systematic order to make it easier to find, work and analyze. In computer science, string searching algorithms and also called string matching algorithms. String matching or searching algorithms search the pattern or alphabets from the array of elements. It  is most required when you have data in bulk and we have to find a particular item amongst hundreds, thousands or more items. 
 Pattern Searching is a process of checking and finding a pattern from a string. Although there are huge numbers of searching algorithms available, but here our work intends to show an overview of comparison between three different types of searching algorithms. We have tried to cover some technical aspects of these three searching algorithms. This research provides a detailed study of how all the three algorithms work & give their performance analysis with respect to time complexity.
@@ -140,7 +7,7 @@ This is the way of making our study, research process easy and fast. Our project
 So our study shows the comparison of the different pattern matching algorithms.
 Keywords: Data, Matching, Searching, Memory and Time Complexity, Hash codes, C.
 
-Motivation of the Work 
+                                Motivation of the Work 
 We use searching so frequently while working on word or maybe power point or any other software. It's simply searching, but this simple search can be done in such effective way. Reading out about so many different algorithms only for searching makes us more eager to go in depth of it. These algorithms propose completely new ideas about how a simple search can be made. This gives us motivation to try and compare these algorithms and try building one of our own.
 Objectives
 This comparative study will help student to get the perfect idea of the algorithms they should use for different data projects. This study gives a clear view of the different functions of the pre existing algorithms with new updates.  We also aim to lay a comparison between our generated algorithm and the previously compared algorithms.
@@ -148,7 +15,8 @@ Sub objective-
 •	This will help students to understand the searching algorithms and their best case scenarios.
 
  
-Problem Statements
+                                Problem Statements
+                                
 There is numerous data which is analyzed and worked upon in every sector in the industry. Every time an item is to be searched an algorithm needs to be implemented to get the best results. A simple example is Google, its uses an algorithm to search for our searched item throughout its database matching the items and then showing us the output. It matches each word with the data and shows us any relevant data to it. 
 So this process needs to be as fast as possible for efficient searching.
 •	String matching is needed to search and retrieve items and important data from bulk of information which takes a lot of time if done manually.
@@ -159,15 +27,16 @@ So this process needs to be as fast as possible for efficient searching.
 •	String matching and searching can also be used for plagiarism check to match and compare the strings of Document 1 and Document 2. 
 When working with data in researches and studies, searching is a common method which helps to pick, update, delete and use data in an easier manner. Searching makes the study easy to understand and work on instead of going through all of it just to find one pattern or text. Working with patterns and matching of data also requires sorting. There are many ways to search data with different time and space complexities. Bases on these complexities and the following test cases we can decide the best algorithm for the data. 
 
- 
-Literature Review
+                                Literature Review
+                                
 Knuth, Morris and Pratt discovered first linear time string-matching algorithm by following a tight analysis of the naïve algorithm. Knuth-Morris-Pratt algorithm keeps the information that naïve approach wasted gathered during the scan of the text. The algorithm was conceived by James H. Morris and independently discovered by Donald Knuth "a few weeks later" from automata theory. Morris and Vaughan  Pratt published a technical report in 1970. [1] [2]
 The Rabin Karp algorithm performs the matching by using hash function which was created by Richard M. Karp and Michael O. Rabin (1987). The Rabin–Karp algorithm is inferior for single pattern searching to Knuth–Morris–Pratt algorithm, Boyer–Moore string search algorithm. The hash function used here basically converts every string value into numeric value. [3]
 Until now Boyer-Moore is considered as the most efficient algorithm for pattern matching. It was developed by Robert S. Boyer and J Strother Moore in 1977. This algorithm preprocesses the pattern that has to be searched in the string. There are two rules followed here. Two rules that are followed here are the good suffix rule and the bad character rule. [4]
 
 
  
-Methodology
+                                Methodology
+
 Rabin-Karp Algorithm:
 Rabin Karp Algorithm works very similar to the brute force approach or the naive pattern matching algorithm, in which we traverse step by step while matching each character. Very similar to this is Rabin-Karp algorithm in which we once match the hash value of the substring if the hash value is matched then only we start with the matching of the characters individually. It algorithm uses hash functions and the rolling hash technique. A hash function is a function that maps the data of arbitrary size to fixed size values returning a  values called hash values, hash codes, digests or hashes.
 In this algorithm there is only one comparison taking place per text subsequence. The character searching and matching is done only when the hash values for the sequences match. 
@@ -176,7 +45,8 @@ Steps for Rabin-Karp algorithm:
 2.	Find the hash for sub patterns or string of the item (pattern length) .
 3.	Match and search the substring/pattern of text and its pattern from the block of data. Search the item if the hash of the sub pattern is equal to the pattern’s hash.
 
-Algorithm
+                                Algorithm
+                                
 STEP 1. function call 
 STEP 2. declare text string to store the main text
 STEP 3. declare pat string to store the pattern to be searched
@@ -210,8 +80,7 @@ STEP 15 check if (text_h < 0) then
 STEP 16 make it positive by adding q
 STEP 17 End Function
 
- 
-Knuth Morris Pratt Algorithm:
+                                Knuth Morris Pratt Algorithm:
 Knuth Morris Pratt Algorithm is based on the concept of generating a suffix-prefix table also known as the Pi table or the lps table. The pi table is generated using the substring (this is the pre-processing part). The way to generate the substring is the main part in this algorithm. The main concept behind this approach is we save the pattern. As soon as we detect the mismatch while searching for the pattern we already know a part of the pattern in the next window.
 Algorithm
 STEP 1. function call
@@ -243,9 +112,8 @@ STEP 3.5.3.5 if the condition is true then assign j as lps[j-1];
     		STEP 3.5.6 else 
     		STEP 3.5.7 print pattern not present 
 STEP 4 End Function
- 
 
-Boyer-Moore Algorithm:
+                                Boyer-Moore Algorithm:
 Boyer-Moore Algorithm unlike the other two algorithm starts matching from the last character of the pattern. In this algorithm we create two approaches , the bad character heuristic and the good suffix heuristic. In this approach we shift the character which is initially in the mismatch state and bring it to a position where a match is found. Upon comparing the last character of the pattern if the match is not found the entire pattern is shifted by the length of the pattern.[5]
 Algorithm
 STEP 1. Start Function
@@ -268,8 +136,7 @@ STEP 2.13 end while
 STEP 2.14 check if flag == 0 return false
 STEP 3 End Function
 
- 
-Self Designed Algorithm:
+                            Self Designed Algorithm:
 Algorithm
 
 STEP 1. passing the main string and the pattern
@@ -282,37 +149,11 @@ STEP 2.4 if match found then print match found from
  	STEP 2.5 else print match not found
 STEP 3. End Function
 
-
-
- 
-System Requirements:
-Hardware Requirements:
-•	64 bits processor architecture supported by windows.
-•	The minimum RAM requirement for proper functioning is 4 GB.
-•	Required input as well as output devices.
-
-Software Requirements:
-•	Visual Studio Code
-•	WSL (Windows Subsystem for Linux)
-•	MS-word (for documentation)
-•	Command prompt, Git Bash
-•	Windows Terminal
-
-
-
- 
-Design:
-Pert Chart
-
-
- 
-Figure 1 Pert Chart
-
-Implementation:
-Flow Chart
+                                Implementation:
+                                Flow Charts
 Rabin-Karp Algorithm
  
-Figure 2Rabin Karp Flow Chart
+![](screenshots/KMPFlowChart.jpg)
 The above given flow chart describes the working of Rabin Karp Algorithm. This is primarily based on hashing! The steps shows us the work flow, initially we take the pattern and the same length of the pattern as text and generate there hash values. We then match the hash values. If the hashes for the two match we start the comparison of the characters one by one. If all the characters are matched we print the result as match found else we move to the next character and continue the process.
 
 Knuth Morris Pratt Algorithm
