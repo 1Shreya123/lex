@@ -1,4 +1,4 @@
-            “A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS”
+#“A COMPARATIVE STUDY OF STRING PATTERN MATCHING ALGORITHMS”
                                         Introduction
 Data is a valuable asset that must be protected. Data is digital information transmitted through electrical signal It is divided into two types, writing, and sound. It may be manipulated or duplicated without the owner's knowledge. Plagiarism is an act of evil in the falsification of a work. It is done to increase the popularity of a plagiarist. With the advent of computer science technology, plagiarism can be avoided. Text mining is part of the science that discusses the processing of words.
 Data Searching is a process which involves matching the data in a systematic order to make it easier to find, work and analyze. In computer science, string searching algorithms and also called string matching algorithms. String matching or searching algorithms search the pattern or alphabets from the array of elements. It  is most required when you have data in bulk and we have to find a particular item amongst hundreds, thousands or more items. 
